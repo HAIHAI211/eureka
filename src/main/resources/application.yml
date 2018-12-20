@@ -1,11 +1,13 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/  # 将本项目注册到server上去
+      defaultZone: http://localhost:8762/eureka/  # 将本项目注册到server上去
     register-with-eureka: false # 配置本项目是否需要注册到server上
     #service-url: http://localhost:8080/eureka/ 这么写没有用,它是map
+  server:
+    enable-self-preservation: false
 spring:
   application:
     name: eureka # 为defaultZone的服务取名
-server:
-  port: 8761
+#server:
+#  port: 8761
